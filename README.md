@@ -22,8 +22,8 @@ Crud operations with Python MongoDB and Flask
 ## Delete Data
 
 ![home](https://i.hizliresim.com/6lzqkc7.PNG)
-
-![home](https://www.hizliresim.com/mzlbd9u.PNG)
+[url=https://www.hizliresim.com/mzlbd9u][img][/img][/url]
+![home](https://www.hizliresim.com/mzlbd9u)
 
 
 
