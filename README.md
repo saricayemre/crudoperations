@@ -1,7 +1,7 @@
 # crudoperations
 Crud operations with Python MongoDB and Flask
 
-![home](RESİM)
+
 ## Home Page
 
 
