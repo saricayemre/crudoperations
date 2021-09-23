@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Görev Yöneticisi</title>
+    <style>
+        .newspaper {
+            -webkit-column-count: 3; /* Chrome, Safari, Opera */
+            -moz-column-count: 3; /* Firefox */
+            column-count: 3;
+        }
+        .head {
+            text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+        <h1>GÖREV YÖNETİCİSİ UYGULAMASI</h1>
+        <h2>Flask+MongoDB</h2>
+    </div>
+    <div class="newspaper">
+        <form method="POST">
+            {{ cform.hidden_tag() }}
+            <fieldset>
+                <legend>Görev Ekle/Oluştur</legend>
+                {{ cform.title.label }}<br>
+                {{ cform.title }}<br>
+                {{ cform.shortdesc.label }}<br>
+                {{ cform.shortdesc }}<br>
+                {{ cform.priority.label }}<br>
+                {{ cform.priority }}<br><br>
+                {{ cform.create }}
+            </fieldset>
+        </form>
+        <form  method="POST">
+            {{ uform.hidden_tag() }}
+            <fieldset>
+                <legend>Görev Düzenle/Güncelle</legend>
+                {{ uform.key.label }}<br>
+                {{ uform.key }}<br><br>
+                Güncelleme Verisi<br><br>
+                {{ uform.shortdesc.label }}<br>
+                {{ uform.shortdesc }}<br>
+                {{ uform.update }}
+            </fieldset>
+        </form>
+        <form method="POST">
+            {{ dform.hidden_tag() }}
+            <fieldset>
+                <legend>Görev Sil</legend>
+                {{ dform.key.label }}<br>
+                {{ dform.key }}<br>
+                Veya<br><br>
+                {{ dform.title.label }}<br>
+                {{ dform.title }}<br><br>
+                {{ dform.delete }}
+            </fieldset>
+        </form>
+        <form method="POST">
+            {{ reset.hidden_tag() }}
+            <b>Tüm Verileri Sil: </b> {{ reset.reset }}
+        </form>
+    </div>
+    <br>
+    <br>
+    <b>Görev Listesi:</b><br><br>
+    {% for i in data %}
+        ID = {{ i["id"] }} <br>
+        Görev Başlığı = {{ i["title"] }}<br>
+        Açıklama = {{ i["shortdesc"] }} <br>
+        Nuamra = {{ i["priority"] }}<br><br>
+    {% endfor %}
+  </body>
+</html>
