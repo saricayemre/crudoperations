@@ -23,7 +23,7 @@ Crud operations with Python MongoDB and Flask
 
 ![home](https://i.hizliresim.com/6lzqkc7.PNG)
 
-![home](https://www.hizliresim.com/mzlbd9u)
+![home](https://i.hizliresim.com/mzlbd9u.PNG)
 
 
 
